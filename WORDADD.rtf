@@ -1,0 +1,83 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Lbl ST\
+Menu("Part of speech?","Noun",01,"Adjective",02,"Adverb",03,"Help",HE,"Quit",QU\
+Lbl QU\
+Return\
+Lbl HE\
+ClrHome\
+Disp " Noun: person, place, or","thing.","(doodoohead, cactus)"," Adjective: description","word.","(poopy, spiny)"," Adverb: description of","other adverbs or adj.","(extremely, painfully)\
+Pause \
+ClrHome\
+Goto ST\
+Lbl 01\
+Input "Noun: ",Str0\
+If length(Str0)\uc0\u8804 10\
+Then\
+If length(Str0)=10\
+Then\
+Str1+Str0
+\f1 \uc0\u8594 
+\f0 Str1\
+Else\
+Str1+Str0+sub("          ",1,10-length(Str0
+\f1 \uc0\u8594 
+\f0 Str1\
+End\
+Input "Plural?: ",A\
+augment(L\uc0\u8321 ,\{A
+\f1 \uc0\u8594 
+\f0 L\uc0\u8321 \
+Else\
+Pause "Error: max 10 chars\
+End\
+Goto ST\
+Lbl 02\
+Input "Adjective: ",Str0\
+If length(Str0)\uc0\u8804 10\
+Then\
+If length(Str0)=10\
+Then\
+Str2+Str0
+\f1 \uc0\u8594 
+\f0 Str2\
+Else\
+Str2+Str0+sub("          ",1,10-length(Str0
+\f1 \uc0\u8594 
+\f0 Str2\
+End\
+Input "Begin with vowel?: ",A\
+augment(L\uc0\u8322 ,\{A
+\f1 \uc0\u8594 
+\f0 L\uc0\u8322 \
+Else\
+Pause "Error: max 10 chars\
+End\
+Goto ST\
+Lbl 03\
+Input "Adverb: ",Str0\
+If length(Str0)\uc0\u8804 10\
+Then\
+If length(Str0)=10\
+Then\
+Str3+Str0
+\f1 \uc0\u8594 
+\f0 Str3\
+Else\
+Str3+Str0+sub("          ",1,10-length(Str0
+\f1 \uc0\u8594 
+\f0 Str3\
+End\
+Input "Begin with vowel?: ",A\
+augment(L\uc0\u8323 ,\{A
+\f1 \uc0\u8594 
+\f0 L\uc0\u8323 \
+Else\
+Pause "Error: max 10 chars\
+End\
+Goto ST}
